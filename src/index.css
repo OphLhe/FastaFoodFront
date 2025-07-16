@@ -1,0 +1,161 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F4E0B6;
+  color: #44230E;
+  font-family: 'Exo';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+Button{
+  font-family: 'Exo';
+  margin-top: 10%;
+  background-color: #D28325 ;
+  box-shadow: 5px 5px 5px #44230E;
+  border: none;
+  border-radius: 10px;
+  padding: 4%;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Button:active{
+  transform: translateY(5px) !important;
+  box-shadow: none;
+}
+
+h3{
+  margin: 3% 0% 0% 0% 
+}
+
+li{
+  margin-top: 10%;
+  padding-bottom: 3%;
+  border-bottom: 1px solid #44230E;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo{
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+.floating-form{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.floating-label-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align:center;
+}
+
+.floating-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 2%;
+    background-color: #d284253d;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+    transform: translateY(-10px);
+    font-size: 10px;
+    color: #d28425;
+}
+
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+    color: #44230E;
+    pointer-events: none;
+    transition: transform 0.2s, font-size 0.2s, color 0.2s;
+}
+
+
+@media screen and (min-width:992px) {
+  
+  Button{
+    font-size: larger;
+    width: 50%;
+    height: 5%;
+    margin-top: 5%;
+  }
+
+  h3{
+    font-size: 32px;
+    margin: 1% 0% 0% 0% 
+  }
+
+  li{
+    padding-bottom: 1%;
+    font-size: 24px;
+  }
+
+  ul{
+    margin-bottom: 5%;
+  }
+
+  .floating-form{
+    width: 50%;
+    margin-top: 2%;
+  }
+
+  .floating-label {
+    font-size: 24px;
+  }
+
+  .floating-input{
+    padding: 2%;
+  }
+
+  .floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+    font-size: 16px;
+}
+
+  .submitButton{
+    width: 30%;
+    padding: 2%;
+    font-size: 16px;
+    margin-top: 0%;
+  }
+ 
+}
+  

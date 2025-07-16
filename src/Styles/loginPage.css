@@ -1,0 +1,19 @@
+
+.logoLogin{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.logoLogin:hover{
+  cursor: pointer;
+}
+
+@media screen and (min-width:992px) {
+
+  .logoLogin{
+    width: 30%;
+  }
+      
+}

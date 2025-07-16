@@ -1,0 +1,18 @@
+.addProductButton{
+    width: 8%;
+    height: 8%;
+    margin-top: 0%;
+    font-size:24px;
+    box-shadow: 2px 2px 5px #44230E;
+}
+
+.stocks{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+

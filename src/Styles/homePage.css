@@ -1,0 +1,23 @@
+
+
+.boutonHP{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  width: 80%;
+}
+
+@media screen and (min-width:992px) {
+
+    .logo{
+      width: 25%;
+    }
+    
+    .boutonHP{ 
+        justify-content: center;
+        align-items: center;
+        margin-top: 0%;
+        width: 50%;
+    }  
+
+}
