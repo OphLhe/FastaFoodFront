@@ -47,9 +47,9 @@ const WelcomePage = () => {
         </div>
         
         <div className='navButtons'>
-            <Button className='handleButton'>Gestion des commandes</Button>
+            <Button className='handleButton'>Commandes</Button>
             <Button className='handleButton' onClick={() => (navigate('/stocks'))}>Stocks</Button>
-            <Button className='handleButton'>Gestion des employé.es</Button>
+            <Button className='handleButton'>Employé.es</Button>
             <Button className='handleButton'>Statistiques</Button>
         </div>
        

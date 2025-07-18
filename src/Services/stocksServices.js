@@ -1,3 +1,13 @@
 import API from './api';
 
-export const stocks = (data) => API.post('./stocks', data); 
+export const addStocks = (data) => API.post('./addStocks',data); 
+
+export const stocks = () => API.get('./stocks' , {
+    headers: {
+        Authorization: `${localStorage.getItem('token')}`
+}});
+
+export const categoryName = () => API.get('./getCategoryName', {
+    headers: {
+        Authorization: `${localStorage.getItem('token')}`
+}});

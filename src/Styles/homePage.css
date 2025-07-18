@@ -1,5 +1,4 @@
 
-
 .boutonHP{
   display: flex;
   flex-direction: column;
@@ -7,7 +6,7 @@
   width: 80%;
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:768px) {
 
     .logo{
       width: 25%;

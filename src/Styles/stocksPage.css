@@ -1,3 +1,38 @@
+.logoWelcome{
+    width: 15%;
+    height: auto;
+}
+
+.logoWelcome:hover{
+  cursor: pointer;
+}
+
+.headerWelcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0%;   
+}
+
+.welcomeButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.headerButtons{
+    font-size: 10px;
+    margin-top: 0%;
+    box-shadow: 2px 2px 3px #44230E;
+}
+
+h3{
+    margin: 0px;
+}
+
 .addProductButton{
     width: 8%;
     height: 8%;
@@ -16,3 +51,91 @@
     gap: 10%;
 }
 
+.table {
+  width: 100%;
+  margin: 0% 2%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+tr:hover{
+    background-color: #44230e70;
+}
+
+.toggleColumnsButton {
+  display: block;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  padding: 2%;
+  margin: 5% 0%;
+}
+
+.tableProduct{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+
+.logoWelcome{
+    width: 8%;
+}
+
+.headerWelcome{
+    width: 100%;
+    display: flex;
+    font-size: 24px;
+}
+
+.headerButtons{
+    font-size: 16px;
+    margin-left: 10%;
+}
+
+.navButtons{
+    height: 10%;
+}
+
+.welcomeButtons{
+   width: 20%;
+}
+
+.stocks{
+    margin-top: 5%;
+}
+
+.addProductButton{
+    width: 3%;
+    padding: 1%;
+}
+
+.tableProduct{
+    margin-top: 3%;
+}
+.handleButton{
+    padding: 1% 5%;
+    font-size: 16px;
+    margin-top: 0%;
+    box-shadow: 2px 2px 3px #44230E;
+}
+
+  .toggleColumnsButton {
+    display: none;
+  }
+
+  .table td, .table th{
+    display: table-cell;
+  }
+
+  .table{
+    width: 90%;
+  }
+
+}

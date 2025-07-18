@@ -1,5 +1,6 @@
 .logoWelcome{
     width: 15%;
+    height: auto;
 }
 
 .logoWelcome:hover{
@@ -65,7 +66,7 @@ h6{
 
 
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:768px) {
 
 .logoWelcome{
     width: 10%;

@@ -4,9 +4,6 @@ import { getEmployee, updatePassword } from '../Services/employeeService';
 import { useEffect, useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 
-
-
-
 const AccountPage = () => {
 
     const navigate = useNavigate();
