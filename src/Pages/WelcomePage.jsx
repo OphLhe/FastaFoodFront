@@ -3,6 +3,7 @@ import imageFastaFood from '../assets/logo_fastaFood.png'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getWelcome } from '../Services/employeeService';
+import Navbar from '../Components/Navbar'
 
 
 const WelcomePage = () => {
@@ -35,19 +36,10 @@ const WelcomePage = () => {
         <>
 
         {/* {employeedata.data.firstName} */}
-        <div className='headerWelcome'>
-            <img className='logoWelcome' 
-            src={imageFastaFood} 
-            onClick={() => {navigate('/')}}/>
-            <h6>WELCOME </h6>
-            <div className='welcomeButtons'>
-                <Button className='headerButtons' onClick={logout}>Déconnexion</Button>
-                <Button className='headerButtons' onClick={() => {navigate('/employee')}}>Compte</Button>
-            </div>
-        </div>
+        <Navbar/>
         
         <div className='navButtons'>
-            <Button className='handleButton'>Commandes</Button>
+            <Button className='handleButton' onClick={() => (navigate('/order'))}>Commandes</Button>
             <Button className='handleButton' onClick={() => (navigate('/stocks'))}>Stocks</Button>
             <Button className='handleButton'>Employé.es</Button>
             <Button className='handleButton'>Statistiques</Button>

@@ -3,6 +3,7 @@ import imageFastaFood from "../assets/logo_fastaFood.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {addStocks , categoryName, stocks} from "../Services/stocksServices"
+import Navbar from '../Components/Navbar'
 
 const StocksPage = () => {
   const navigate = useNavigate();
@@ -70,34 +71,14 @@ const StocksPage = () => {
  
   return (
     <>
-      <div className="headerWelcome">
-        <img
-          className="logoWelcome"
-          src={imageFastaFood}
-          onClick={() => {
-            navigate("/");
-          }}
-        />
-        <h6>WELCOME </h6>
-        <div className="welcomeButtons">
-          <Button className="headerButtons" onClick={logout}>
-            Déconnexion
-          </Button>
-          <Button
-            className="headerButtons"
-            onClick={() => {
-              navigate("/employee");
-            }}
-          >
-            Compte
-          </Button>
-        </div>
-      </div>
+      <Navbar/>
+
       <div className="navButtons">
-        <Button className="handleButton">Commandes</Button>
+        <Button className="handleButton" onClick={() => (navigate('/order'))}>Commandes</Button>
         <Button className="handleButton">Employé.es</Button>
         <Button className="handleButton">Statistiques</Button>
       </div>
+
       <div className="stocks">
         <h3>Stocks</h3>
         <Button className="addProductButton" onClick={() => setModalAddProduct(true)}>+</Button>
@@ -110,8 +91,8 @@ const StocksPage = () => {
         <thead>
           <tr>
             <th>Id produit</th>
-            <th>Categorie</th>
             <th>Nom du Produit</th>
+            <th>Categorie</th>
             {showAllColumns && (
             <>
               <th>En Stock</th>
@@ -125,8 +106,8 @@ const StocksPage = () => {
           {products.map((product, index) => (
             <tr key={index}>
               <td>{product.idProduct}</td>
-              <td>{product.categoryName}</td>
               <td>{product.nameProduct}</td>
+              <td>{product.categoryName}</td>
               {showAllColumns && (
               <>
                 <td >{product.stock}</td>
