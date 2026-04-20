@@ -12,6 +12,8 @@ import './Styles/accountPage.css'
 import './Styles/welcomePage.css'
 import './Styles/orderPage.css'
 import './Styles/stocksPage.css'
+import './Styles/productCard.css'
+
 
 
 function App() {

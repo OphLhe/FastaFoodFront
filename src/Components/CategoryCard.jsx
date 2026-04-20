@@ -1,14 +1,13 @@
 import {Button} from 'react-bootstrap';
 
-const CategoryCard = (catNames) => {
+const CategoryCard = ({catname}) => {
  
     return ( 
         <>
         <Button  
         className='buttonCatCard'
-        key={catNames} 
-        value={catNames.catnames.categoryName}>
-          {catNames.catnames.categoryName}
+        value={catname.idCategory}>
+          {catname.categoryName}
         </Button>
         </>
     );

@@ -17,7 +17,7 @@ const HomePage = () => {
     return (  
         <>
         <div className='logo'>
-            <img src={imageFastaFood} onClick={() => {navigate('/')}}/>
+            <img src={imageFastaFood}/>
         </div>
         <div className='boutonHP'>
              <Button onClick={login}>CONNEXION</Button>

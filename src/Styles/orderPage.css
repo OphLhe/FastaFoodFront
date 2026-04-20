@@ -1,18 +1,36 @@
-.catCard{
+.catCard {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  place-content: center;
+  gap: 5%;
+  width: 90%;
+  margin-bottom: 10%;
+}
+
+.card {
+  border: none !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prodCard{
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .catCard {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10%;
-}
-.card{
-   border: none !important;
-}
+    flex-wrap: nowrap;
+  }
 
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .buttonCatCard {
+    padding: 24px 16px;
+  }
 }
-
-

@@ -8,34 +8,16 @@ import Navbar from '../Components/Navbar'
 
 const WelcomePage = () => {
     const navigate = useNavigate();
-    const [employeedata, setEmployeedata] = useState([])
     
     const logout = async () => {
         localStorage.removeItem('token')
         alert('Déconneté.e avec succés')
         navigate('/')
     }
-
-    const fetchEmployeeName = async () => {
-        try {
-            const res = await getWelcome()
-            setEmployeedata(res)
-            console.log(res);
-            
-        } catch (error) {
-            console.error('error fetching employee name',error);
-    
-        }
-    }
-
-    useEffect (() => {
-        fetchEmployeeName()
-    }, []);
     
     return ( 
         <>
 
-        {/* {employeedata.data.firstName} */}
         <Navbar/>
         
         <div className='navButtons'>
@@ -46,7 +28,7 @@ const WelcomePage = () => {
         </div>
        
         <div className='newClient'>
-            <Button className='newClientButtons'>Nouveau client</Button>
+            <Button className='newClientButtons' onClick={() => (navigate('/order'))}>Nouveau client</Button>
         </div>
         </>
      );
