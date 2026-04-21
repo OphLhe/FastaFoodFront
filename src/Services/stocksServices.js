@@ -11,3 +11,9 @@ export const categoryName = () => API.get('./getCategoryName', {
     headers: {
         Authorization: `${localStorage.getItem('token')}`
 }});
+
+export const productName = () => API.get('./getProductByName', {
+    headers:{
+        Authorization: `${localStorage.getItem('token')}`
+    }
+} )

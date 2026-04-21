@@ -11,6 +11,7 @@ const OrderPage = () => {
   const navigate = useNavigate();
   const [catNames, setCatName] = useState([]);
   const [products, setProducts] = useState([]);
+  const [selectedCategoryName, setSelectedCategoryName] = useState(null);
 
   const logout = async () => {
     localStorage.removeItem("token");
@@ -27,14 +28,14 @@ const OrderPage = () => {
     }
   };
 
-  const fetchProducts= async () => {
-      try {
-        const resP = await stocks()
-        setProducts(resP.data)
-        console.log(resP.data)
-      } catch (error) {
-        console.error('Error fetching products');
-      }
+  const fetchProducts = async () => {
+    try {
+      const resP = await stocks();
+      setProducts(resP.data);
+      console.log(resP.data);
+    } catch (error) {
+      console.error("Error fetching products");
+    }
   };
 
   useEffect(() => {
@@ -42,10 +43,14 @@ const OrderPage = () => {
     fetchProducts();
   }, []);
 
+  const filteredProducts = selectedCategoryName
+    ? products.filter(
+        (product) => product.categoryName === selectedCategoryName,
+      )
+    : products;
+
   return (
     <>
-      <Navbar />
-
       <div className="navButtons">
         <Button className="handleButton" onClick={() => navigate("/stocks")}>
           Stocks
@@ -57,20 +62,26 @@ const OrderPage = () => {
       <h2>Commandes</h2>
 
       <div className="catCard">
+        <Button
+          className="buttonCatCard"
+          onClick={() => setSelectedCategoryName(null)}
+        >
+          Tous les produits
+        </Button>
         {catNames.map((catName) => (
-          <CategoryCard 
-          key={catName.idCategory} catname={catName}/>
+          <CategoryCard
+            key={catName.idCategory}
+            catname={catName}
+            onClick={() => setSelectedCategoryName(catName.categoryName)}
+          />
         ))}
       </div>
 
       <div className="prodCard">
-        {products.map((productname) => (
-            <ProductCard
-            key={productname.idProduct} productname={productname} />
+        {filteredProducts.map((product) => (
+          <ProductCard key={product.idProduct} productname={product} />
         ))}
       </div>
-
-
     </>
   );
 };
